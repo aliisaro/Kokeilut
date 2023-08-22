@@ -13,6 +13,8 @@ y = str(massa/1000).split('.')
 a = y[0]
 b = y[1]
 
-c = int(b) / 100
+c = float(b) / 100
+
+print(massa)
 
 print(f"Massa nykymittojen mukaan: {a} kilogrammaa ja {c} grammaa")
