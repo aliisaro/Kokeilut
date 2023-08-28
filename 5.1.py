@@ -7,7 +7,6 @@ for luku in range(arpakuutiot):
     silmaluku = random.randrange(1,6)
     silmaluvut.append(silmaluku)
 
-print(silmaluvut)
 print(sum(silmaluvut))
 
 
