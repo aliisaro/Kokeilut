@@ -1,8 +1,6 @@
-luku1 = 1
-luku2 = 1
+luku = 1
 
-while luku1 < 1001:
-    if luku2 % 3 == 0:
-        print(luku2)
-    luku1 += 1
-    luku2 += 1
+while luku < 1001:
+    if luku % 3 == 0:
+        print(luku)
+    luku += 1
