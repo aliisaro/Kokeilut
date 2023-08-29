@@ -4,8 +4,12 @@ while True:
     luku = input("Anna luku: ")
 
     if luku == "":
+        luvut.sort(reverse=True)
         break
     else:
         luvut.append(int(luku))
 
-print(f"Pienin antamasi luku on {min(luvut)} ja suurin luku on {max(luvut)}.")
+for i in luvut[:5]:
+    print(i)
+
+
