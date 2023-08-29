@@ -1,6 +1,6 @@
 import random
 
-x = random.randrange(1,10)
+x = random.randrange(1,11)
 
 while True:
     arvaus = int(input("Arvaa luku: "))
