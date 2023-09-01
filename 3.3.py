@@ -1,7 +1,7 @@
-sukupuoli = input("Mikä on biologinen sukupuolesi (nainen/mies): ")
+sukupuoli = input("Mikä on biologinen sukupuolesi (nainen/mies): ").lower()
 arvo = int(input("Mikä on hemoglobiiniarvosi?: "))
 
-if sukupuoli == "Nainen" or "nainen":
+if sukupuoli == "nainen":
     if arvo > 175:
         print("Hemoglobiini arvosi on korkea.")
     elif arvo < 117:
@@ -11,7 +11,7 @@ if sukupuoli == "Nainen" or "nainen":
 
     print("Naisen normaali hemoglobiiniarvo on välillä 117-175 g/l.")
 
-elif sukupuoli == "Mies" or "mies":
+elif sukupuoli == "mies":
     if arvo > 195:
         print("Hemoglobiini arvosi on korkea.")
     elif arvo < 134:
