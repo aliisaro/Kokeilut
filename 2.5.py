@@ -1,5 +1,5 @@
-leiviskamaara = int(input("Anna leiviskät: "))
-naulamaara = int(input("Anna naulat: "))
+leiviskamaara = float(input("Anna leiviskät: "))
+naulamaara = float(input("Anna naulat: "))
 luotimaara = float(input("Anna luodit: "))
 
 luodit = luotimaara * 13.3
