@@ -11,4 +11,4 @@ massa = luodit + naulat + leiviskat #grammoina
 kg = int(massa//1000)
 g = massa-1000*kg
 
-print(f"Massa nykymittojen mukaan: {kg} kilogrammaa ja {g:.2f} grammaa.")
+print(f"Massa nykymittojen mukaan:\n{kg} kilogrammaa ja {g:.2f} grammaa.")
