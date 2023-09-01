@@ -1,11 +1,8 @@
 luvut = []
+luku = input("Anna luku: ")
 
-while True:
+while luku!= "":
+    luvut.append(int(luku))
     luku = input("Anna luku: ")
-
-    if luku == "":
-        break
-    else:
-        luvut.append(int(luku))
 
 print(f"Pienin antamasi luku on {min(luvut)} ja suurin luku on {max(luvut)}.")
