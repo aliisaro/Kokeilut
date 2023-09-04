@@ -19,4 +19,4 @@ for luku in range(N):
 approx = sum([4/i - 4/(i+2) for i in range(1, 2*n+1, 4)])
 print(approx)
 
-#print(pii≈4n/N)
+#print(pii≈4n/N
