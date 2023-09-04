@@ -4,5 +4,4 @@ def summanlasku(kokonaisluvut):
     return summa
 
 lista = [2,2,2]
-lasku = summanlasku(lista)
-print(lasku)
+print(summanlasku(lista))
