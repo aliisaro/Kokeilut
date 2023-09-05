@@ -12,10 +12,10 @@ def pizza(halkaisija, hinta):
         print(f"\nEkan pizzan yksikkohinta on {yksikkohinnat[0]:.3f} e/cm2.")
         print(f"Tokan pizzan yksikkohinta on {yksikkohinnat[1]:.3f} e/cm2.")
 
-        if yksikkohinnat.index(min(yksikkohinnat)) == 0:
-            print(f"Eka pizza antaa paremman vastineen rahalle.")
-        elif yksikkohinnat.index(min(yksikkohinnat)) == 1:
-            print(f"Toka pizza antaa paremman vastineen rahalle.")
+    if yksikkohinnat.index(min(yksikkohinnat)) == 0:
+        print(f"Eka pizza antaa paremman vastineen rahalle.")
+    elif yksikkohinnat.index(min(yksikkohinnat)) == 1:
+        print(f"Toka pizza antaa paremman vastineen rahalle.")
 
 yksikkohinnat = []
 
