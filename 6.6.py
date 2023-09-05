@@ -1,9 +1,8 @@
-yksikkohinnat = []
 def pizza(halkaisija, hinta):
 
     area = 3.14159 * pow((halkaisija / 2), 2)
 
-    if hinta == hinta1:
+    if halkaisija == halkaisija1:
         yksikkohinta1 = hinta / area
         yksikkohinnat.append(yksikkohinta1)
     else:
@@ -17,6 +16,8 @@ def pizza(halkaisija, hinta):
             print(f"Eka pizza antaa paremman vastineen rahalle.")
         elif yksikkohinnat.index(min(yksikkohinnat)) == 1:
             print(f"Toka pizza antaa paremman vastineen rahalle.")
+
+yksikkohinnat = []
 
 hinta1 = float(input("Ekan pizzan hinta (e): "))
 halkaisija1 = float(input("Ekan pizzan halkaisija (cm): "))
