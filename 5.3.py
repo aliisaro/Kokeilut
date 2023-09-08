@@ -1,4 +1,4 @@
-luku = int(input("Anna luku: "))
+luku = int(input("Anna kokonaisluku: "))
 
 flag = False
 
