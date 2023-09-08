@@ -4,7 +4,8 @@ arpakuutiot = int(input("Anna arpakuutioiden määrä: "))
 silmaluvut = []
 
 for luku in range(arpakuutiot):
-    silmaluku = random.randrange(1,7)
+    silmaluku = random.randint(1,6)
+    print(silmaluku)
     silmaluvut.append(silmaluku)
 
 print(sum(silmaluvut))
