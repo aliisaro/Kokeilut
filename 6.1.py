@@ -1,7 +1,7 @@
 import random
 def noppa():
     while True:
-        luku = random.randrange(1,7)
+        luku = random.randint(1,6)
         print(luku)
         if luku == 6:
             break
