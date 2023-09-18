@@ -1,6 +1,7 @@
 lentoasemat = {}
 
-while True:
+syote = "moi"
+while syote != "lopeta":
     syote = input("Valitse 'uusi lentoasema', 'lentoaseman tiedot' tai 'lopeta':")
 
     if syote.lower() == "uusi lentoasema":
@@ -10,5 +11,4 @@ while True:
     elif syote.lower() == "lentoaseman tiedot":
         ICAO = input("Lentoaseman ICAO-koodi: ")
         print(lentoasemat['ICAO'])
-    elif syote.lower() == "lopeta":
-        break
+
