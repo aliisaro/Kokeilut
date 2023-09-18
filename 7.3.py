@@ -1,6 +1,6 @@
 lentoasemat = {}
-
 syote = "moi"
+
 while syote != "lopeta":
     syote = input("Valitse 'uusi lentoasema', 'lentoaseman tiedot' tai 'lopeta':")
 
