@@ -9,11 +9,11 @@ yhteys = mysql.connector.connect(
     autocommit = True
 )
 
-def LentokenttaLukumaaratTyypeittain(koodi):
+def LentokenttaLukumaaratTyypeittain(maakoodi):
     sql = "SELECT country.name AS 'maa', TYPE AS 'tyyppi', COUNT(airport.name) AS 'lukumäärä'"
     sql += "FROM airport, country "
     sql += "WHERE airport.iso_country = country.iso_country "
-    sql += "AND country.iso_country = '" + koodi + "'"
+    sql += "AND country.iso_country = '" + maakoodi + "'"
     sql += "GROUP BY TYPE;"
 
     kursori = yhteys.cursor()
