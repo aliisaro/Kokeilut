@@ -21,7 +21,7 @@ def LentokenttienEtaisyys(ICAO1, ICAO2):
 
     #print(tulos[0], tulos[1])
 
-    print(f"Lentokenttien välinen matka kilometreinä: {distance.distance(tulos[0], tulos[1]).km:0.2f}")
+    print(f"Lentokenttien välinen matka kilometreinä: {distance.distance(tulos[0], tulos[1]).km:.3f}")
     return
 
 ICAO1 = input("Anna ensimmäisen lentokentän ICAO-koodi: ")
