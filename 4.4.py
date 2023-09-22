@@ -1,17 +1,13 @@
 import random
 
-x = random.randrange(1,11)
+luku = random.randint(1, 10)
+arvaus = -1
 
-while True:
+while arvaus != luku:
     arvaus = int(input("Arvaa luku: "))
-
-    if arvaus > x:
-        print("Liian suuri arvaus.")
-    elif arvaus < x:
+    if arvaus < luku:
         print("Liian pieni arvaus.")
+    elif arvaus > luku:
+        print("Liian suuri arvaus.")
     else:
         print("Oikein!")
-        break
-
-
-
