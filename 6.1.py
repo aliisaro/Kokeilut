@@ -1,8 +1,10 @@
 import random
 def noppa():
-    while True:
-        luku = random.randint(1,6)
-        print(luku)
-        if luku == 6:
-            break
+    luku = 6
+    heitto = 0
+
+    while heitto != 6:
+        heitto = random.randint(1,6)
+        print(heitto)
+
 noppa()
