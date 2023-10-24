@@ -26,7 +26,7 @@ class Hissi:
         self.luku -= alas
         self.viimeisin.append(self.luku)
 
-
+#PÄÄOHJELMA
 h = Hissi(1, 7)
 
 h.siirry_kerrokseen(5)
