@@ -1,49 +1,51 @@
 class Hissi:
-    def __init__(self, alin, ylin):
-        self.alin = alin
-        self.ylin = ylin
+    def __init__(self, numero):
+        self.numero = numero
 
-    viimeisin = [1]
+    viimeisin = [[1], [1], [1]]
 
     def siirry_kerrokseen(self, kerros):
-        self.kerros = kerros
 
-        if self.kerros > int(self.viimeisin[-1]):
-            while self.kerros >= int(self.viimeisin[-1]):
-                print(f"Olet kerroksessa {int(self.viimeisin[-1])}")
-                self.kerros_ylos(1);
-        elif self.kerros < int(self.viimeisin[-1]):
-            while self.kerros < int(self.viimeisin[-1]):
-                self.kerros_alas(1);
-                print(f"Olet kerroksessa {int(self.viimeisin[-1])}")
+        if kerros > int(self.viimeisin[self.numero-1][0]):
+            while kerros >= int(self.viimeisin[self.numero-1][0]):
+                print(f"Olet kerroksessa {int(self.viimeisin[self.numero-1][0])}")
+                self.kerros_ylos();
+        elif kerros < int(self.viimeisin[self.numero-1][0]):
+            while kerros < int(self.viimeisin[self.numero-1][0]):
+                self.kerros_alas();
+                print(f"Olet kerroksessa {int(self.viimeisin[self.numero-1][0])}")
 
-    def kerros_ylos(self, ylos):
-        self.luku = int(self.viimeisin[-1])
-        self.luku += ylos
-        self.viimeisin.append(self.luku)
+    def kerros_ylos(self):
+        self.luku = int(self.viimeisin[self.numero-1][0])
+        self.luku += 1
+        self.viimeisin[self.numero-1][0] = self.luku
 
-    def kerros_alas(self, alas):
-        self.luku = int(self.viimeisin[-1])
-        self.luku -= alas
-        self.viimeisin.append(self.luku)
+    def kerros_alas(self):
+        self.luku = int(self.viimeisin[self.numero-1][0])
+        self.luku -= 1
+        self.viimeisin[self.numero-1][0] = self.luku
 
 class Talo:
     def __init__(self, alin, ylin, lukumaara):
         self.alin = alin
         self.ylin = ylin
-        self.hissilista = [lukumaara]
+        self.lukumaara = lukumaara
+
+        self.hissit = []
+
+        luku = 1
+        for i in range(lukumaara):
+            h = Hissi(luku)
+            self.hissit.append(h)
+            luku += 1
 
     def aja_hissia(self, numero, kohdekerros):
+        print(f"\nAjat hissiä {numero}")
+        self.hissit[numero-1].siirry_kerrokseen(kohdekerros)
 
-
-
-h = Hissi(1, 7)
-h.siirry_kerrokseen(5)
-print("\n")
-h.siirry_kerrokseen(1)
 
 talo = Talo(1, 7 , 3)
 
-talo.aja_hissia(2, 7)
-
-
+talo.aja_hissia(1, 5)
+talo.aja_hissia(2, 4)
+talo.aja_hissia(3, 3)
