@@ -1,5 +1,5 @@
 class Auto:
-    def __init__(self, tunnus, huippunopeus, nopeus=0, matka=2000):
+    def __init__(self, tunnus, huippunopeus, nopeus=0, matka=0):
         self.tunnus = tunnus
         self.huippunopeus = huippunopeus
         self.nopeus = nopeus
@@ -25,7 +25,7 @@ class Auto:
         print(f"Auton kulkema matka: {auto.matka} km")
 
 
-auto = Auto("ABC-123", 142)
+auto = Auto("ABC-123", 142, 0, 2000)
 
 auto.kiihdyta(60)
 auto.kulje(1.5)
