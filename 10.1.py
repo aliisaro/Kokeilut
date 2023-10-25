@@ -2,29 +2,27 @@ class Hissi:
     def __init__(self, alin, ylin):
         self.alin = alin
         self.ylin = ylin
+        self.kerros = alin
 
-    viimeisin = [1]
 
-    def siirry_kerrokseen(self, kerros):
+    def siirry_kerrokseen(self, uusikerros):
 
-        if kerros > int(self.viimeisin[-1]):
-            while kerros >= int(self.viimeisin[-1]):
-                print(f"Olet kerroksessa {int(self.viimeisin[-1])}")
-                self.kerros_ylos(1);
-        elif kerros < int(self.viimeisin[-1]):
-            while kerros < int(self.viimeisin[-1]):
-                self.kerros_alas(1);
-                print(f"Olet kerroksessa {int(self.viimeisin[-1])}")
+        while self.kerros != uusikerros:
+            print(f"Olet kerroksessa {self.kerros}")
 
-    def kerros_ylos(self, ylos):
-        self.luku = int(self.viimeisin[-1])
-        self.luku += ylos
-        self.viimeisin.append(self.luku)
+            if self.kerros < uusikerros:
+                self.kerros_ylos();
+            elif self.kerros > uusikerros:
+                self.kerros_alas();
 
-    def kerros_alas(self, alas):
-        self.luku = int(self.viimeisin[-1])
-        self.luku -= alas
-        self.viimeisin.append(self.luku)
+        print(f"Olet kerroksessa {self.kerros}")
+    def kerros_ylos(self):
+        if self.kerros < self.ylin:
+            self.kerros += 1
+
+    def kerros_alas(self):
+        if self.kerros > self.alin:
+            self.kerros -= 1
 
 #PÄÄOHJELMA
 h = Hissi(1, 7)
