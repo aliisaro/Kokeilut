@@ -35,7 +35,14 @@ while all(auto.matka < 10000 for auto in autot):
 
 print("\nTulokset: ")
 
+voittaja = []
 for auto in autot:
     print(f"Rekkari: {auto.tunnus}, huippunopeus: {auto.huippunopeus}, nopeus lopusssa: {auto.nopeus}, kuljettu matka: {auto.matka}")
+
+    if auto.matka >= 10000:
+        voittaja.append(auto.tunnus)
+
+print(f"Voittaja on auto: {voittaja}")
+
 
 
