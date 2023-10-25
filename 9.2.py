@@ -6,14 +6,14 @@ class Auto:
         self.matka = matka
 
     def kiihdyta(self, muutos):
+        self.nopeus += muutos
+
         if muutos > 0:
-            self.nopeus += muutos
             if self.nopeus > self.huippunopeus:
                 print(f"Auton nopeus: {self.huippunopeus} km/h")
             else:
                 print(f"Auton nopeus: {self.nopeus} km/h")
         elif muutos < 0:
-            self.nopeus += muutos
             if self.nopeus < 0:
                 print(f"Auton nopeus jarrutuksen jälkeen: 0 km/h")
             else:
