@@ -31,7 +31,7 @@ class Hissi:
         if self.kerros > self.alin:
             self.kerros -= 1
 
-#PÄÄOHJELMA
+#pääohjelma
 h = Hissi(1, 7)
 
 h.siirry_kerrokseen(7)
