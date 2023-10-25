@@ -6,19 +6,15 @@ class Auto:
         self.matka = matka
 
     def kiihdyta(self, muutos):
-        if muutos > 0:
-            self.nopeus += muutos
-            if self.nopeus > self.huippunopeus:
-                print(f"Auton nopeus: {self.huippunopeus} km/h")
-            else:
-                print(f"Auton nopeus: {self.nopeus} km/h")
-        elif muutos < 0:
-            self.nopeus += muutos
-            if self.nopeus < 0:
-                print(f"Auton nopeus jarrutuksen jälkeen: 0 km/h")
-            else:
-                print(f"Auton nopeus jarrutuksen jälkeen: {auto.nopeus} km/h")
-        return
+
+        self.nopeus += muutos
+
+        if self.nopeus > self.huippunopeus:
+            print(f"Auton nopeus: {self.huippunopeus} km/h")
+        elif self.nopeus < 0:
+            print(f"Auton nopeus: 0 km/h")
+        else:
+            print(f"Auton nopeus: {self.nopeus} km/h")
 
     def kulje(self, tunnit):
         self.matka += self.nopeus * tunnit
