@@ -8,6 +8,13 @@ class Hissi:
     def siirry_kerrokseen(self, uusikerros):
 
         while self.kerros != uusikerros:
+
+            #if uusikerros > self.ylin:
+                #print(f"Olet kerroksessa {self.ylin}")
+            #elif uusikerros < self.alin:
+                #print(f"Olet kerroksessa {self.alin}")
+            #else:
+
             print(f"Olet kerroksessa {self.kerros}")
 
             if self.kerros < uusikerros:
@@ -27,6 +34,6 @@ class Hissi:
 #PÄÄOHJELMA
 h = Hissi(1, 7)
 
-h.siirry_kerrokseen(5)
+h.siirry_kerrokseen(7)
 print("\n")
 h.siirry_kerrokseen(1)
