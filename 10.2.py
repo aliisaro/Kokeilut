@@ -1,43 +1,36 @@
 class Hissi:
-    def __init__(self, numero):
-        self.numero = numero
+    def __init__(self, alin, ylin):
+        self.alin = alin
+        self.ylin = ylin
+        self.kerros = alin
 
-    viimeisin = [[1], [1], [1]]
 
-    def siirry_kerrokseen(self, kerros):
+    def siirry_kerrokseen(self, uusikerros):
 
-        if kerros > int(self.viimeisin[self.numero-1][0]):
-            while kerros >= int(self.viimeisin[self.numero-1][0]):
-                print(f"Olet kerroksessa {int(self.viimeisin[self.numero-1][0])}")
+        while self.kerros != uusikerros:
+            print(f"Olet kerroksessa {self.kerros}")
+
+            if self.kerros < uusikerros:
                 self.kerros_ylos();
-        elif kerros < int(self.viimeisin[self.numero-1][0]):
-            while kerros < int(self.viimeisin[self.numero-1][0]):
+            elif self.kerros > uusikerros:
                 self.kerros_alas();
-                print(f"Olet kerroksessa {int(self.viimeisin[self.numero-1][0])}")
 
+        print(f"Olet kerroksessa {self.kerros}")
     def kerros_ylos(self):
-        self.luku = int(self.viimeisin[self.numero-1][0])
-        self.luku += 1
-        self.viimeisin[self.numero-1][0] = self.luku
+        if self.kerros < self.ylin:
+            self.kerros += 1
 
     def kerros_alas(self):
-        self.luku = int(self.viimeisin[self.numero-1][0])
-        self.luku -= 1
-        self.viimeisin[self.numero-1][0] = self.luku
+        if self.kerros > self.alin:
+            self.kerros -= 1
 
+#PÄÄOHJELMA
 class Talo:
     def __init__(self, alin, ylin, lukumaara):
         self.alin = alin
         self.ylin = ylin
         self.lukumaara = lukumaara
-
-        self.hissit = []
-
-        luku = 1
-        for i in range(lukumaara):
-            h = Hissi(luku)
-            self.hissit.append(h)
-            luku += 1
+        self.hissit = [Hissi(alin, ylin) for i in range(lukumaara)]
 
     def aja_hissia(self, numero, kohdekerros):
         print(f"\nAjat hissiä {numero}")
@@ -46,6 +39,8 @@ class Talo:
 
 talo = Talo(1, 7 , 3)
 
+talo.aja_hissia(2, 7)
+talo.aja_hissia(2, 1)
 talo.aja_hissia(1, 5)
-talo.aja_hissia(2, 4)
-talo.aja_hissia(3, 3)
+talo.aja_hissia(1, 3)
+
