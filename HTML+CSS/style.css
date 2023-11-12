@@ -1,0 +1,156 @@
+/*/////////////////////////////////////ALL PAGES///////////////////////////////////////*/
+body {
+  	font-family: tahoma, sans-serif;
+  	word-wrap: break-word;
+  	margin: auto;
+	background: url("NY.jpg") no-repeat fixed center;
+}
+
+a:hover {
+	background-color: #a9a9a9
+}
+
+#laatikko1 {
+	margin: auto;
+	width: 80%;
+	height: 100%;
+}
+
+#laatikko2 {
+	background: linear-gradient(#4f4f4f, transparent);
+	margin: auto;
+	width: 80%;
+	height: 100vh;
+}
+
+#laatikko3 {
+	background: linear-gradient(#4f4f4f, transparent);
+	margin: auto;
+	width: 80%;
+	height: 100%;
+}
+
+#navigation {
+	width: 80%;
+	margin: auto;
+}
+#navigation ul {
+	list-style-type: none;
+	overflow: hidden;
+	background-color: grey;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation li {
+	display: inline;
+	float: right;
+}
+
+#navigation li a {
+	padding: 20px 50px 20px 50px;
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+/*/////////////////////////////////////ALL PAGES///////////////////////////////////////*/
+
+/*////////////////////////////////////HOME PAGE////////////////////////////////////////*/
+h1 {
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	padding-top: 10%;
+	text-shadow: 1px 1px 2px black;
+}
+
+#Homepagetext p {
+	font-size: 14px;
+	width: 70%;
+	margin: auto;
+}
+
+#home-image {
+	text-align: center;
+}
+
+#home-image img {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 80%;
+	height: 250px;
+}
+/*/////////////////////////////////////HOME PAGE///////////////////////////////////////*/
+
+/*///////////////////////////////////PRODUCT PAGE//////////////////////////////////////*/
+#product-image {
+	text-align: center;
+}
+
+#product-image img{
+	width: 90%;
+	height: 250px;
+}
+
+#product-main-text p {
+	font-size: 16px;
+	width: 90%;
+	margin: auto;
+}
+
+#row {
+	display: flex;
+	padding: 0 30px 0 30px;
+}
+
+.column {
+	flex: 33.33%;
+  	padding: 0 15px 0 15px;
+	background-color: aliceblue;
+	margin: 10px;
+}
+
+.column p {
+	font-size: 14px;
+}
+
+.column img {
+	width: 100%;
+	height: 300px;
+}
+/*///////////////////////////////////PRODUCT PAGE//////////////////////////////////////*/
+
+/*///////////////////////////////////CONTACT PAGE//////////////////////////////////////*/
+#flex-container {
+	display: flex;
+	padding: 30px;
+}
+
+h3 {
+	font-size: 25px;
+	color: black;
+	padding-left: 10%;
+}
+
+#contact-image {
+	text-align: right;
+	padding: 0;
+	margin-left: 10%;
+}
+
+#contact-image img {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 80%;
+	height: 300px;
+}
+
+#contact-list {
+	width: 30%;
+	float: left;
+}
+#contact-list ul {
+	list-style-type: none;
+}
+
+/*///////////////////////////////////CONTACT PAGE//////////////////////////////////////*/
