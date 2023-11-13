@@ -19,5 +19,6 @@ list.push(n3)
 list.push(n2)
 list.push(n1)
 
-
-console.log(list)
+for (let i in list) {
+  console.log(list[i])
+}
