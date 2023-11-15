@@ -1,15 +1,15 @@
 'use strict';
-let number = prompt("Give a number of participants:")
-let count = parseInt(number)
+let count = 1
 let list = []
 
-while (0 < count) {
-  let name = prompt("Give a name:")
+while (6 >= count) {
+  let name = prompt("Give a name of doggie " + count + ":")
   list.push(name)
-  count = count - 1
+  count = count + 1
 }
 
 list.sort();
+list.reverse()
 
 let newlist = document.getElementById("myList");
 for (let i = 0; i < list.length; ++i) {
